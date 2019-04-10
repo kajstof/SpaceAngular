@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {SpaceShip} from "../space-ship";
-import {FighterShip} from "../fighter-ship";
-import {BomberShip} from "../bomber-ship";
-import {Pilot} from "../pilot";
-import {TransportShip} from "../transport-ship";
+import { SpaceShip } from "../space-ship";
+import { FighterShip } from "../fighter-ship";
+import { BomberShip } from "../bomber-ship";
+import { Pilot } from "../pilot";
+import { TransportShip } from "../transport-ship";
 
 @Component({
   selector: 'app-hangar',
