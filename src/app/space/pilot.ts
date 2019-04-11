@@ -22,7 +22,7 @@ export class Pilot {
 
 
   get fullName(): string {
-    return `${this.firstName} ${this.lastName}`
+    return `${this.firstName} ${this.lastName}`;
   }
 
   set fullName(value: string) {
