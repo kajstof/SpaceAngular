@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { A2sCommModule } from "a2s-comm";
-import { SpaceModule } from "./space/space.module";
+import { A2sCommModule } from 'a2s-comm';
+import { SpaceModule } from './space/space.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import { SpaceModule } from "./space/space.module";
     BrowserModule,
     AppRoutingModule,
     A2sCommModule,
-    SpaceModule
+    SpaceModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
