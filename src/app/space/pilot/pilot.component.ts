@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Pilot } from "../pilot";
+import { Pilot } from '../pilot';
 
 @Component({
   selector: 'app-pilot',
@@ -7,12 +7,8 @@ import { Pilot } from "../pilot";
   styleUrls: ['./pilot.component.scss']
 })
 export class PilotComponent implements OnInit {
-
   @Input() pilot: Pilot;
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 }

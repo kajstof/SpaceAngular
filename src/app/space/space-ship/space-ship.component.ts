@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {SpaceShip} from "../space-ship";
+import { Component, Input, OnInit } from '@angular/core';
+import { SpaceShip } from "../space-ship";
 
 @Component({
   selector: 'app-space-ship',
@@ -7,12 +7,8 @@ import {SpaceShip} from "../space-ship";
   styleUrls: ['./space-ship.component.scss']
 })
 export class SpaceShipComponent implements OnInit {
-
   @Input() spaceShip: SpaceShip;
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 }
