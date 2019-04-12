@@ -1,4 +1,4 @@
-import { SpaceShipType } from "./space-ship-type.enum";
+import { SpaceShipType } from './space-ship-type.enum';
 
 export interface OrderFormValue {
   shipCount: number;
