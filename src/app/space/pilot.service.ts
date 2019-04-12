@@ -15,4 +15,10 @@ export class PilotService {
       map((data) => data.map((pilotAttrs) => new Pilot(pilotAttrs)))
     );
   }
+
+  getPilot(id: number) {
+    return this.http.get<PilotAttrs>(`/api/pilots/${id}`).pipe(
+      map((pilotAttrs) => new Pilot(pilotAttrs))
+    );
+  }
 }
