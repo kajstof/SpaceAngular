@@ -8,12 +8,20 @@ import { PilotComponent } from './pilot/pilot.component';
 import { PilotRoomComponent } from './pilot-room/pilot-room.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { EngineersRoomComponent } from './engineers-room/engineers-room.component';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '@shared/shared.module';
 import { DestructionRoomComponent } from './destruction-room/destruction-room.component';
 import { PilotFormComponent } from './pilot-form/pilot-form.component';
 
 @NgModule({
-  declarations: [HangarComponent, SpaceShipComponent, PilotComponent, PilotRoomComponent, EngineersRoomComponent, DestructionRoomComponent, PilotFormComponent],
+  declarations: [
+    HangarComponent,
+    SpaceShipComponent,
+    PilotComponent,
+    PilotRoomComponent,
+    EngineersRoomComponent,
+    DestructionRoomComponent,
+    PilotFormComponent
+  ],
   exports: [HangarComponent],
   imports: [
     CommonModule,

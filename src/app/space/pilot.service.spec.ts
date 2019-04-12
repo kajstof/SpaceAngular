@@ -1,4 +1,3 @@
-import { TestBed } from '@angular/core/testing';
 import { PilotService } from './pilot.service';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
