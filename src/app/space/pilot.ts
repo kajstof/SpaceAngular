@@ -1,11 +1,13 @@
 export class Pilot {
   firstName: string;
   lastName: string;
-  imageUrl: string;
+  imageUrl = '/assets/unknown-pilot.png';
 
-  constructor(fullName: string, imageUrl: string) {
+  constructor(fullName: string, imageUrl?: string) {
     this.fullName = fullName;
-    this.imageUrl = imageUrl;
+    if (imageUrl !== undefined) {
+      this.imageUrl = imageUrl;
+    }
   }
 
   get fullName(): string {
