@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./space-ship.component.scss']
 })
 export class SpaceShipComponent implements OnInit {
-
-  constructor() { }
+  spaceShip = {
+    modelName: 'Orzeł 7',
+    imageUrl: '/assets/orzel7.jpg',
+    health: 75,
+    activeShields: true,
+    activeWeapons: false
+  };
 
   ngOnInit(): void {
   }
