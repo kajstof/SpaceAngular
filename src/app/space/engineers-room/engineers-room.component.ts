@@ -5,6 +5,7 @@ import { OrderFormValue } from '../order-form-value';
 import { ShipType } from '../ship-type';
 import { SpaceShip } from '../space-ship';
 import { SpaceShipService } from '../space-ship.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-engineers-room',
@@ -12,7 +13,6 @@ import { SpaceShipService } from '../space-ship.service';
   styleUrls: ['./engineers-room.component.scss']
 })
 export class EngineersRoomComponent implements OnInit {
-  @Output() shipProduced = new EventEmitter<SpaceShip>();
   spaceShipTypes: ShipType[] = [
     {label: 'Myśliwiec', value: SpaceShipType.Fighter},
     {label: 'Bombowiec', value: SpaceShipType.Bomber}
@@ -25,7 +25,10 @@ export class EngineersRoomComponent implements OnInit {
       validators: [Validators.required, Validators.min(1), Validators.max(5)]
     })
   });
-  isProducing: boolean;
+  isProducing = false;
+  shipsCount = this.spaceShipService.hangarShips.pipe(
+    map((ships) => ships.length)
+  );
 
   constructor(private spaceShipService: SpaceShipService) {
   }
@@ -37,7 +40,6 @@ export class EngineersRoomComponent implements OnInit {
     this.isProducing = true;
     this.spaceShipService.produceShips(formValues)
       .subscribe({
-        next: (ship) => this.shipProduced.emit(ship),
         complete: () => this.isProducing = false
       });
   }
