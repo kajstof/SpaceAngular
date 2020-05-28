@@ -1,13 +1,17 @@
+import { PilotAttrs } from './pilot-attrs';
+
 export class Pilot {
+  private static defaultImageUrl = '/assets/unknown-pilot.png';
+  id: number;
   firstName: string;
   lastName: string;
-  imageUrl = '/assets/unknown-pilot.png';
+  imageUrl: string;
 
-  constructor(fullName: string, imageUrl?: string) {
-    this.fullName = fullName;
-    if (imageUrl !== undefined) {
-      this.imageUrl = imageUrl;
-    }
+  constructor(attrs: Partial<PilotAttrs> = {}) {
+    this.id = attrs.id;
+    this.firstName = attrs.firstName;
+    this.lastName = attrs.lastName;
+    this.imageUrl = attrs.imageUrl || Pilot.defaultImageUrl;
   }
 
   get fullName(): string {

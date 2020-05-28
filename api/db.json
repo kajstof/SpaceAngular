@@ -1,0 +1,22 @@
+{
+  "pilots": [
+    {
+      "id": 1,
+      "firstName": "Kapitan",
+      "lastName": "Bomba",
+      "imageUrl": "/assets/kapitanbomba.png"
+    },
+    {
+      "id": 2,
+      "firstName": "Generał",
+      "lastName": "Lufa",
+      "imageUrl": "/assets/generallufa.png"
+    },
+    {
+      "id": 3,
+      "firstName": "Chorąży",
+      "lastName": "Torpeda",
+      "imageUrl": null
+    }
+  ]
+}
