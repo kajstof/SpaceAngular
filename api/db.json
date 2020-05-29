@@ -17,6 +17,23 @@
       "firstName": "Chorąży",
       "lastName": "Torpeda",
       "imageUrl": null
+    },
+    {
+      "id": 4,
+      "firstName": "Adam",
+      "lastName": "Ciemka",
+      "imageUrl": "/assets/unknown-pilot.png"
+    }
+  ],
+  "forbidden-names": [
+    {
+      "name": "Maruda"
+    },
+    {
+      "name": "Ciamajda"
+    },
+    {
+      "name": "Gapcio"
     }
   ]
 }
