@@ -1,4 +1,9 @@
-import { PilotAttrs } from './pilot-attrs';
+export interface PilotAttrs {
+  id: number;
+  firstName: string;
+  lastName: string;
+  imageUrl: string;
+}
 
 export class Pilot {
   private static defaultImageUrl = '/assets/unknown-pilot.png';

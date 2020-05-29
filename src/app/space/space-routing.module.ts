@@ -4,7 +4,8 @@ import { HangarComponent } from './hangar/hangar.component';
 import { EngineersRoomComponent } from './engineers-room/engineers-room.component';
 import { DestructionRoomComponent } from './destruction-room/destruction-room.component';
 import { DestructionGuard } from './destruction.guard';
-
+import { PilotFormComponent } from './pilot-form/pilot-form.component';
+import { PilotResolver } from './pilot-resolver';
 
 const routes: Routes = [
   {
@@ -15,6 +16,11 @@ const routes: Routes = [
       {path: 'destruction', component: DestructionRoomComponent, canActivate: [DestructionGuard]},
       {path: '', redirectTo: 'production', pathMatch: 'full'}
     ]
+  },
+  {
+    path: 'space/pilots/:id',
+    component: PilotFormComponent,
+    resolve: {pilot: PilotResolver}
   }
 ];
 
@@ -22,6 +28,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-
 export class SpaceRoutingModule {
 }
